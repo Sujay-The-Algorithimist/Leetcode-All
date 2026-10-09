@@ -39,11 +39,10 @@ class Solution {
         if (curly == 1) {
             cnt++; // Insert the second ')'
 
-            if (!st.isEmpty()) {
-                st.pop();
-            } else {
-                cnt++; // Insert missing '('
-            }
+            if (!st.isEmpty())
+            st.pop();
+            else
+            cnt++; // Insert missing '('
         }
 
         cnt += 2 * st.size();
