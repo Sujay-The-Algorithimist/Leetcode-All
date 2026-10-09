@@ -11,17 +11,16 @@ class Solution {
             char c = s.charAt(i);
 
             if (c == '(') {
+
                 if (curly == 1) {
                     cnt++; // Insert one ')' to complete the pair
                     curly = 0;
 
-                    if (!st.isEmpty()) {
-                        st.pop();
-                    } else {
-                        cnt++; // Insert '(' for the unmatched ')'
-                    }
+                    if (!st.isEmpty())
+                    st.pop();
+                    else
+                    cnt++; // Insert '(' for the unmatched ')'
                 }
-
                 st.push('(');
             } else {
                 curly++;
@@ -29,11 +28,10 @@ class Solution {
                 if (curly == 2) {
                     curly = 0;
 
-                    if (!st.isEmpty()) {
-                        st.pop();
-                    } else {
-                        cnt++; // Insert missing '('
-                    }
+                    if (!st.isEmpty())
+                    st.pop();
+                    else
+                    cnt++; // Insert missing '('
                 }
             }
         }
